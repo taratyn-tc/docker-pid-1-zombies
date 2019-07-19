@@ -1,3 +1,5 @@
-FROM ubuntu
+FROM python:3-alpine
 
-ENTRYPOINT ["/bin/ps", "axu"]
+ADD zombie_spawn.py /zombie_spawn.py
+
+ENTRYPOINT ["python", "/zombie_spawn.py"]
